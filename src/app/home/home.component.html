@@ -24,16 +24,16 @@
         </div>
         <div class="row my-3">
             @for (recipe of homeRecipes; track $index) {
-                <div class="col-lg-4">
-                    <div class="p-3">
-                        <img [src]="recipe.image" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{recipe.name}}</h5>
-                        </div>
+            <div class="col-lg-4">
+                <div class="p-3">
+                    <img [src]="recipe.image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{recipe.name}}</h5>
                     </div>
                 </div>
+            </div>
             }
-            
+
         </div>
     </div>
     <!-- banner -->
@@ -68,22 +68,20 @@
             </div>
         </div>
     </div>
-    <!-- client tesimonial -->
     <!-- Client Testimonil -->
     <div class="text-center my-5">
         <h1>Client Testimonial</h1>
         <marquee behavior="" direction="">
-            <div class="row my-5">
-                <div class="col-lg-4">
-                    <div class="rounded border w-100 p-3">
-                        <h5>Name</h5>
-                        <p style="white-space: normal; width: 100%; text-align: justify;">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Commodi,
-                            eum. Dicta iusto dolores consequatur animi, quasi veniam itaque dolorum qui eligendi? Facere
-                            soluta earum pariatur, maiores quidem nisi ipsum architecto?</p>
-                    </div>
+            <div class="d-flex my-5">
+                @for (item of allTestimony; track $index) {
+                <div class="rounded border w-100 p-3 me-2">
+                    <h5>{{item.name}}</h5>
+                    <p style="white-space: normal; width: 100%; text-align: justify;">{{item.message}}</p>
                 </div>
+                }
             </div>
         </marquee>
     </div>
 </div>
+<!-- footer -->
+<app-footer></app-footer>

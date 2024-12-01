@@ -7,8 +7,8 @@
             <br>
             <img [src]="recipe.image" alt="noimg" class="img-fluid my-5">
             <div class="d-flex justify-content-between">
-                <button class="btn btn-success">Download The Recipe</button>
-                <button class="btn btn-primary">Save The Recipe</button>
+                <button (click)="addDownloadRecipe()" class="btn btn-success">Download The Recipe</button>
+                <button (click)="saveRecipe()" class="btn btn-primary">Save The Recipe</button>
             </div>
         </div>
         <div class="col-lg-6">
@@ -22,16 +22,16 @@
                 <div class="d-flex flex-column align-items-center">
                     <img width="70px" src="https://tse2.mm.bing.net/th?id=OIP.xy52jM0FuazKAQTfeyvo_gHaHa&pid=Api&P=0&h=180" alt="">
                     <p class="fw-bolder">Preparation Time</p>
-                    <h6><span class="text-success fw-bolder">25</span>{{recipe.prepTimeMinutes}}</h6>
+                    <h6><span class="text-success fw-bolder">{{recipe.prepTimeMinutes}}</span> Minutes</h6>
                 </div>
                 <div class="d-flex flex-column align-items-center">
                     <img width="100px" src="https://eastmanscorner.com/wp-content/uploads/2015/01/cooking-icon.png" alt="">
                     <p class="fw-bolder">Cooking Time</p>
-                    <h6><span class="text-success fw-bolder">{{recipe.cookTimeMinutes}}</span>Minutes</h6>
+                    <h6><span class="text-success fw-bolder">{{recipe.cookTimeMinutes}}</span> Minutes</h6>
                 </div>
                 <div class="d-flex flex-column align-items-center">
                     <img width="80px" src="https://cdn1.iconfinder.com/data/icons/fitness-sport/512/calories-512.png" alt="">
-                    <p class="fw-bolder">Calorie Per Seri</p>
+                    <p class="fw-bolder">Calorie Per Serving</p>
                     <h6><span class="text-success fw-bolder">{{recipe.caloriesPerServing}}</span></h6>
                 </div>
             </div>
@@ -70,3 +70,5 @@
          </div>
     </div>
 </div>
+<!-- footer -->
+<app-footer></app-footer>
